@@ -13,7 +13,6 @@ import 'package:hn_app/src/widgets/search.dart';
 import 'package:hn_app/src/widgets/headline.dart';
 import 'package:hn_app/src/favorites.dart';
 import 'package:hn_app/src/pages/favorites.dart';
-import 'package:hn_app/src/pages/settings.dart';
 import 'package:hn_app/src/widgets/loading_info.dart';
 
 void main() {
@@ -57,6 +56,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Hacker News',
       theme: Provider.of<PrefsNotifier>(context).useDarkMode == false
           ? ThemeData(
@@ -76,7 +76,6 @@ class MyApp extends StatelessWidget {
       darkTheme: _darkTheme,
       home: MyHomePage(),
       routes: {
-        '/settings': (context) => SettingsPage(),
         '/favorites': (context) => FavoritesPage(),
       },
     );
@@ -203,11 +202,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
-              onTap: () => Navigator.of(context).pushNamed('/settings'),
-            )
           ],
         ),
       ),
