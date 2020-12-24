@@ -25,8 +25,9 @@ dependencies:
   built_collection: ^4.3.2
   built_value: ^7.0.9
   shared_preferences: ^0.5.7+2
-  moor: ^3.1.0
-  moor_ffi: ^0.6.0
+  moor: ^3.4.0
+  # moor_ffi: ^0.6.0
+  sqlite3_flutter_libs: ^0.3.0
   path_provider: ^1.6.9
   font_awesome_flutter: ^8.8.1
   cupertino_icons: ^0.1.2
